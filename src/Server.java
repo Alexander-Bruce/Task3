@@ -4,6 +4,10 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+<<<<<<< HEAD
+import java.util.Scanner;
+=======
+>>>>>>> 7d3cb73f6f747c7d08913470db857e1cf1f91b10
 
 public class Server {
 
@@ -11,7 +15,14 @@ public class Server {
 
     public static void main(String[] args) {
         try {
+<<<<<<< HEAD
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("请输入端口号: ");
+            int port = scanner.nextInt(); // 从控制台读取端口号
+            ServerSocket serverSocket = new ServerSocket(port); // 创建服务器套接字并绑定到端口1234
+=======
             ServerSocket serverSocket = new ServerSocket(1234); // 创建服务器套接字并绑定到端口1234
+>>>>>>> 7d3cb73f6f747c7d08913470db857e1cf1f91b10
             System.out.println("服务器已启动，等待客户端连接...");
 
             // 不断等待客户端连接

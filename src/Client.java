@@ -19,9 +19,15 @@ public class Client extends Thread {
     private Receiver receiver; // 接收器
 
     // 客户端构造函数，接受文件路径和反转文件路径
+<<<<<<< HEAD
+    public Client(String filePath, String reverseFilePath, String ip, int port) {
+        try {
+            socket = new Socket(ip, port); // 连接到服务器
+=======
     public Client(String filePath, String reverseFilePath) {
         try {
             socket = new Socket("localhost", 1234); // 连接到服务器
+>>>>>>> 7d3cb73f6f747c7d08913470db857e1cf1f91b10
             System.out.println("发现服务器");
 
             File file = new File(filePath); // 创建文件对象
@@ -36,6 +42,10 @@ public class Client extends Thread {
             if (initializeConnection()) {
                 System.out.println("成功建立连接");
                 System.out.printf("总块数为: %d%n", totalchunk);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7d3cb73f6f747c7d08913470db857e1cf1f91b10
                 try {
                     Thread.sleep(1000); // 睡眠一秒
                 } catch (Exception e) {
@@ -120,9 +130,19 @@ public class Client extends Thread {
     // 客户端主方法
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+<<<<<<< HEAD
+        String filePath = "ascii_document.txt";
+        String reverseFilePath = "reverse.txt";
+        System.out.println("请输入服务器 IP 地址:");
+        String ip = in.nextLine();
+        System.out.println("请输入服务器端口:");
+        int port = in.nextInt();
+        new Client(filePath, reverseFilePath, ip, port); // 创建并启动客户端线程
+=======
         String filePath = "C:\\Users\\26259\\OneDrive\\桌面\\New\\ascii_document.txt";
         String reverseFilePath = "C:\\Users\\26259\\OneDrive\\桌面\\New\\reverse.txt";
         new Client(filePath, reverseFilePath); // 创建并启动客户端线程
+>>>>>>> 7d3cb73f6f747c7d08913470db857e1cf1f91b10
     }
 }
 

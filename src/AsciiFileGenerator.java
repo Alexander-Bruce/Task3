@@ -5,7 +5,11 @@ import java.util.Random;
 
 public class AsciiFileGenerator {
     public static void main(String[] args) {
+<<<<<<< HEAD
+        String fileName = "ascii_document.txt";
+=======
         String fileName = "C:\\Users\\26259\\OneDrive\\桌面\\New\\ascii_document.txt";
+>>>>>>> 7d3cb73f6f747c7d08913470db857e1cf1f91b10
 
         try {
             // 创建 PrintWriter 对象
